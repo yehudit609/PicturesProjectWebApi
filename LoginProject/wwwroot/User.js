@@ -1,13 +1,10 @@
 ﻿
 const register = async () => {
-    
-    
     const user = {
         Email: document.getElementById("email").value,
         Password: document.getElementById("password").value,
         FirstName: document.getElementById("firstname").value,
-        LastName: document.getElementById("lastname").value,
-        UserId:0
+        LastName: document.getElementById("lastname").value
 
     }
     const response = await fetch('api/users/', {
@@ -18,12 +15,15 @@ const register = async () => {
         },
         body: JSON.stringify(user)
     });
+    const data = await response.json()
     //alert("xxxxxxx");
-    if (response.ok == false) {
+    if (!response.ok) {
         alert(`status: ${response.status} username or password not good😒`);
         //throw new Error(`error! status:${response.status}`)
     }
     else {
+        sessionStorage.setItem("user", JSON.stringify(data));
+
         alert("register success!!")
         window.location.href = "Update.html"
     }
@@ -36,7 +36,7 @@ const update = async () => {
         Password: document.getElementById("password").value,
         FirstName: document.getElementById("firstname").value,
         LastName: document.getElementById("lastname").value,
-        id: document.getElementById("id").value
+        id: sessionStorage.getItem('user').id
     }
     //const Id = JSON.parse(sessionStorage.getItem('user'))//.id
     const response = await fetch("api/users/" + user.id, {
@@ -78,6 +78,7 @@ const update = async () => {
 
 
 const login = async () => {
+    console.log("gdcrctrf")
     const user = {
         Email: document.getElementById("email").value,
         Password: document.getElementById("password").value
@@ -90,14 +91,17 @@ const login = async () => {
         },
         body: JSON.stringify(user)
     });
+    const data = await response.json()
     if (!response.ok) {
+        console.log("ssssssssssssssssss")
         throw new Error(`error! status:${response.status}`)
     }
     else {
+        console.log("gdcrctrf")
 
-        window.location.href = "Update.html"
-        sessionStorage.setItem("user", JSON.stringify(res));
-
+        //sessionStorage.setItem("id", response.json.UserId);
+        sessionStorage.setItem("user", JSON.stringify(data));
+        window.location.href = "Products.html"        
     }
 }
 

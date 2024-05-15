@@ -72,11 +72,12 @@ button {
 /*progress {
     width: 100%;
     padding: 15px;
-    background-image: linear-gradient(to right, #4e1c81, #00bcd4, #e91e63, #4caf50);*/ /* Gradient: Purple to Green */
-    /*color: #ffffff;*/ /* White */
-    /*border: none;
+    background-image: linear-gradient(to right, #4e1c81, #00bcd4, #e91e63, #4caf50);
+    color: #ffffff;
+
+    border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s;
-    text-align: center;
-}*/
+}
+*/

@@ -17,6 +17,6 @@ public partial class User
 
     public string? Password { get; set; }
 
-    public List<int> OrderId { get; set; } = new List<int>();
+    //public List<int> OrderId { get; set; } = new List<int>();
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 }

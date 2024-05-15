@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using DTOs;
 using Repositories;
 
 namespace LoginProject
@@ -8,6 +9,9 @@ namespace LoginProject
         public AutoMapping()
         {
             CreateMap<Product, ProductDto>();
+            CreateMap<UserLoginDto, User>();
+            CreateMap<UserRegister, User>();
+            CreateMap<UserUpdate, User>();
         }
     }
 }

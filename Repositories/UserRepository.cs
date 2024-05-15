@@ -1,6 +1,8 @@
 ﻿using DTOs;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
+
+
 namespace Repositories
 
 {
@@ -49,12 +51,14 @@ namespace Repositories
                 throw err;
             }
         }
-        public async Task<User> GetUserByEmailAndPassword(UserLoginDto userLogin)
+        public async Task<User> GetUserByEmailAndPassword(User userLogin)
         {
 
             return await _picturesStoreContext.Users.Where(e => e.Email == userLogin.Email && e.Password == userLogin.Password).FirstOrDefaultAsync();
 
 
         }
+
+        
     }
 }

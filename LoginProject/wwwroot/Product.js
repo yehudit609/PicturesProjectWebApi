@@ -29,7 +29,6 @@ const getAllProduct = async () => {
 const drawBasket = () => {
     const productsArr = JSON.parse(sessionStorage.getItem("basket"));
    
-    /*  productsArr.forEach(product => {*/
     const template = document.getElementById('temp-row');
 
     productsArr.forEach(product => {

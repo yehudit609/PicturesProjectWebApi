@@ -18,7 +18,7 @@ namespace Services
         {
             return _IUserRepository.getUserById(id);
         }
-        public Task<User> GetUserByEmailAndPassword(UserLoginDto userLogin)
+        public Task<User> GetUserByEmailAndPassword(User userLogin)
         {
 
             return _IUserRepository.GetUserByEmailAndPassword(userLogin);
@@ -32,6 +32,8 @@ namespace Services
             else
                 return null;
         }
+
+
         public Task<User> updateUser(int id, User userToUpdate)
         {
             //בדיקת הסיסמה
@@ -42,5 +44,10 @@ namespace Services
             var result = Zxcvbn.Core.EvaluatePassword(password);
             return result.Score;
         }
+
+        //public Task<User> addUser(User user)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
