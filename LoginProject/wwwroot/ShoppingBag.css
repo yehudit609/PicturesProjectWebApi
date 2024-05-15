@@ -1,0 +1,155 @@
+﻿html, body {
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+}
+
+.cart {
+    width: 960px;
+    margin: 0 auto;
+}
+th {
+    padding: 9px 11px;
+    text-align: right;
+    border-top: 1px solid #C7C5C5;
+    border-bottom: 1px solid #C7C5C5;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 0px;
+    font-family: 'azo-sans', sans-serif;
+    text-transform: uppercase;
+}
+ td.imageColumn {
+    width: 66px;
+}
+
+th.itemsColumn,td.imageColumn {
+    padding-right: 10px;
+}
+
+td {
+    padding: 15px;
+    padding-right: 0;
+    vertical-align: top;
+    border-bottom: 1px solid #C7C5C5;
+}
+
+
+.itemName, .subItemName {
+    font-family: 'azo-sans', sans-serif;
+    font-weight: 400;
+    margin-bottom: 2px;
+    font-size: 14px;
+    line-height: 100%;
+}
+
+
+.availabilityColumn {
+    width: 205px;
+    min-width: 205px;
+    max-width: 205px;
+    font-size: 14px;
+    color: #4D8958;
+    font-family: 'azo-sans', sans-serif;
+}
+.imageColumn div {
+    width: 66px;
+    height: 99px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+}
+
+.delete a.showText {
+    text-indent: 0;
+    width: 90px;
+    padding-left: 10px;
+    background-image: url(/Images/icn-remove.png);
+    height: 24px;
+    background-position: left -3px;
+    font-size: 11px !important;
+    line-height: 15px;
+    position:relative;
+}
+
+.delete a {
+    display: block;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color:black;
+}
+
+.price {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 2px;
+    font-family: 'azo-sans', sans-serif;
+    font-weight: 600 !important;
+}
+
+#title {
+    margin: 8px 0 12px;
+    padding-left: 15px;
+}
+
+    #title h1 {
+        margin: 15px 0 2px 0;
+        font-family: 'azo-sans', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 100%;
+        float: right;
+    }
+
+h1 {
+    font: 236.36% 'azo-sans',sans-serif;
+}
+
+#title p {
+    font-size: 11px;
+    float: right;
+    padding-right: 10px;
+    padding-top: 19px;
+}
+
+p, fieldset {
+    margin-bottom: 1em;
+}
+
+a.GoToCheckout.TopLink {
+    margin-top: 10px;
+}
+
+.ShoppingBag a.GoToCheckout {
+    float: left;
+    margin-right: 23px;
+}
+
+.nxbtn.primary {
+    background: #1a6461;
+    font-size: 11px;
+}
+
+.nxbtn.primary, .nxbtn.secondary {
+    padding-top: 6px;
+    padding-bottom: 7px;
+    color: #fff;
+    border: 0;
+    text-transform: uppercase;
+    font-family: 'azo-sans',sans-serif;
+}
+
+.ContentArea a {
+    color: #111;
+    text-decoration: none;
+}
+
+.nxbtn {
+    border-radius: 3px;
+    display: inline-block;
+    padding: 4px 10px;
+}

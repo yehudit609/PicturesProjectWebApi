@@ -1,0 +1,223 @@
+﻿html, body {
+    direction:rtl;
+    margin:0;
+    padding:0;
+}
+
+* {
+    font-size: 100%;
+    font-family: system-ui;
+}
+
+ul{
+    margin:0;
+}
+
+.floatRight{
+    float:right;
+}
+
+.QuickLinks ul li a::after {
+    content: '|';
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+.QuickLinks ul li a::after {
+    content: '|';
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    padding:15px;
+    float:left;
+    height:550px;
+    margin:6px;
+}
+
+.img-w{
+    height:300px;
+}
+
+p.description{
+    height:65px;
+}
+.bar::before {
+    content: 'חנות הצעצועים שלי';
+    color: white;
+    /* display: inline-block; */
+    position: absolute;
+    /* margin: 0 auto; */
+    /* display: block; */
+    top: 8px;
+    left: 51%;
+    font-family: Helvetica;
+}
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+.bar {
+    background-color: black;
+    height: 35px;
+}
+
+.Icon {
+    background-image: url(../Images/BagActive.png);
+    background-repeat: no-repeat;
+    padding: 9px 2px 2px 2px;
+    color: #4f8855;
+    float: right;
+    margin: 1px 0 0 0;
+    width: 24px;
+    height: 21px;
+}
+
+.BagSummary .Icon .ItemCount {
+    overflow: hidden;
+    height: 16px;
+}
+
+    .BagSummary .Icon .ItemCount span {
+        text-align: center;
+        width: 100%;
+        display: block;
+        font-size: 100%;
+        margin-top: -1px;
+    }
+.goToCart {
+    background: #1a6461;
+    font-size: 11px;
+    color: #fff;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    border: 0;
+    text-transform: uppercase;
+    font-family: 'azo-sans',sans-serif;
+    border-radius: 3px;
+    display: inline-block;
+    float: right;
+    margin:4px;
+}
+
+.addedToBagDialogue::before {
+    background-color: #fff;
+    box-shadow: 2px -2px 2px rgba(0,0,0,.2);
+    content: " ";
+    display: block;
+    height: 15px;
+    left: 60px;
+    position: absolute;
+    top: -7px;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    vertical-align: top;
+    width: 15px;
+    z-index: 4999;
+}
+
+
+.QuickLinks ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    font-family: Helvetica;
+}
+
+.QuickLinks ul li {
+  float:left;
+}
+
+
+.Filters {
+    position: absolute;
+    width: 184px;
+    float: right;
+    margin: 4px 4px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    position: absolute;
+    z-index: 102;
+    background-color: rgb(249, 249, 249);
+    font-family: Arial;
+    font-size: 14px;
+    min-height:100%;
+
+}
+.nameFilter input {
+    width: 70%;
+    height: 24px;
+}
+
+.filterBreak {
+    padding-top: 10vh;
+}
+
+
+
+.priceInputText {
+    background-color: #fff;
+    height: 31px;
+    padding: 3px 7px;
+    line-height: normal;
+    width: 50px;
+    border: 1px solid #888C8C;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgb(15 17 17 / 15%) inset;
+    outline: 0;
+
+}
+.priceCurrency {
+    position: absolute;
+    margin-top: 6.5px;
+    line-height: 22px;
+    font-size: 25px;
+    margin-right: -19px;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
