@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Repositories;
 
@@ -17,6 +18,7 @@ public partial class Order
     //public List<int> orderItemId { get; set; } = new List<int>();
 
     public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+    [JsonIgnore]
 
     public virtual User User { get; set; } = null!;
 }

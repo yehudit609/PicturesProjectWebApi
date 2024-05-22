@@ -62,14 +62,16 @@ namespace LoginProject.Controllers
         [HttpPost]
         public async Task<ActionResult<Order>> Post([FromBody] OrderDto orderDto)
         {
-            Order order = _mapper.Map<Order>(orderDto); // Correcting the mapping call
-
-            Order newOrder = await _IOrderService.addOrder(order);
+            Order orders = _mapper.Map<OrderDto,Order>(orderDto);
+            Order newOrder = await _IOrderService.addOrder(orders);
+            //OrderDto orderDto1 = _mapper.Map<Order, OrderDto>(newOrder);
             if (newOrder != null)
                 return Ok(newOrder);
-
             return BadRequest();
+            
         }
+
+            
 
 
 
