@@ -11,7 +11,7 @@ namespace LoginProject
             CreateMap<Product, ProductDto>();
             CreateMap<UserLoginDto, User>();
             CreateMap<UserRegister, User>();
-            CreateMap<UserUpdate, User>();
+            CreateMap<OrderDto, Order>();
         }
     }
 }

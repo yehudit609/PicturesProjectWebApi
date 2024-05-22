@@ -1,3 +1,39 @@
+const addToBasket = (prod) => {
+    console.log("addToBasket")
+    const basket = JSON.parse(sessionStorage.getItem('basketArray')) || [];
+
+    const index = basket.findIndex(item => item.productId === prod.productId);
+    if (index !== -1) {
+        basket[index].quantity++;
+    } else {
+        prod = {...prod, quantity: 1 };
+        basket.push(prod);
+    }
+    
+    sessionStorage.setItem('basketArray', JSON.stringify(basket));
+    updateSum(prod.price)
+}
+
+
+const updateSum = async (sum) => {
+    //const sum1 = sessionStorage.getItem('sumToPay') || 0;    
+    const currentSum = parseInt(document.getElementById('sum').textContent);
+    const newSum = currentSum + sum;
+    document.getElementById('sum').textContent = newSum;
+    sessionStorage.setItem('sumToPay', newSum)
+}
+
+//const updateSum1 = async () => {
+//    const sum = sessionStorage.getItem('sumToPay');    
+//    const currentSum = parseInt(document.getElementById('sum1').textContent);
+//    const newSum = currentSum + sum;
+//    document.getElementById('sum1').textContent = newSum;
+//    sessionStorage.setItem('sumToPay', newSum)
+//}
+
+
+
+
 const drawProducts = (products) => {
     const template = document.getElementById('temp-card');
     products.forEach(product => {
@@ -9,13 +45,21 @@ const drawProducts = (products) => {
         clone.querySelector('.description').textContent = product.description;
 
         clone.querySelector('button').addEventListener('click', () => {
-
+            console.log(product)
+            addToBasket(product);
             console.log('Product added to cart:', product.description);
         });
 
         document.getElementById('ProductList').appendChild(clone);
     });
 }
+
+
+
+
+
+
+
 
 const getAllProduct = async () => {
     const responseGet = await fetch('api/Product')
@@ -26,25 +70,64 @@ const getAllProduct = async () => {
     }
 }
 
-const drawBasket = () => {
-    const productsArr = JSON.parse(sessionStorage.getItem("basket"));
-   
-    const template = document.getElementById('temp-row');
 
+
+
+
+
+
+const drawBasket = () => {
+    const productsArr = JSON.parse(sessionStorage.getItem("basket"));   
+    const template = document.getElementById('temp-row');
     productsArr.forEach(product => {
         const row = template.content.cloneNode(true);
-
         row.querySelector(".price").innerText = product.price;
         row.querySelector(".image").src = '../Images/' + product.imageUrl;
         row.querySelector(".descriptionColumn").innerText = product.description;
         row.querySelector('img').src = '../Images/' + product.imageUrl;
-        //row.querySelector('button').addEventListener('click', () => { addToBasket(product) });
-
         document.getElementById("PoductList").appendChild(row);
-
-        /*cln.querySelector(".totalColumn").addEventListener('click', () => { deleteItem(prod[i]) });*/
     });
-    /*})*/
+
 }
+
+
+const addOrder = async () => {
+    const order = {
+        //orderSum: document.getElementById("sum").value,
+        //orderSum: 20,
+        userId: JSON.parse(sessionStorage.getItem('user')).userId
+    }
+    const response = await fetch("api/order", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(order)
+    });
+    const data = await response.json()
+    if (response.ok == false) {
+
+        throw new Error(`error! status:${response.status}`)
+    }
+    else {
+        alert("add order")
+        clearBasket();
+        updateSum1()
+        return data.orderId
+        window.location.href = "products.html"
+    }
+    
+}
+
+
+const clearBasket = () => {
+    sessionStorage.removeItem('basketArray');
+    sessionStorage.removeItem('sumToPay');
+
+}
+
+
+
+
 
 getAllProduct();

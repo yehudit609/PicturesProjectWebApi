@@ -13,22 +13,27 @@ namespace Repositories
             _picturesStoreContext = picturesStoreContext;
         }
 
-        public Task<User> addOrder(User user)
+        public async Task<Order> addOrder(Order order)
+        {
+            try
+            {
+                
+                await _picturesStoreContext.Orders.AddAsync(order);
+                await _picturesStoreContext.SaveChangesAsync();
+                return order;
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
+        }
+
+        public Task<Order> getAllOrders()
         {
             throw new NotImplementedException();
         }
 
-        public Task<User> GetUserByEmailAndPassword(UserLoginDto userLogin)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<User> getUserById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<User> updateUser(int id, User userToUpdate)
+        public Task<Order> getOrderById(int id)
         {
             throw new NotImplementedException();
         }

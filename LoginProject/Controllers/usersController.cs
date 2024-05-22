@@ -76,9 +76,9 @@ namespace LoginProject.Controllers
 
         //PUT api/<UserController>/5
         [HttpPut("{id}")]
-        public async Task<ActionResult<User>> Put(int id, [FromBody] UserUpdate userToUpdate)
+        public async Task<ActionResult<User>> Put(int id, [FromBody] UserRegister userToUpdate)
         {
-            User user1 = _mapper.Map<UserUpdate, User>(userToUpdate);
+            User user1 = _mapper.Map<UserRegister, User>(userToUpdate);
             return await _IUserService.updateUser(id, user1);
         }
 
