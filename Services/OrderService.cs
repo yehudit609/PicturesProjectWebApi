@@ -37,15 +37,11 @@ namespace Services
 
         public async Task<int> sumToPay(ICollection<OrderItem> orderItems)
         {
-            decimal totalSum = 0;
+            int totalSum = 0;
             foreach (var item in orderItems)
             {
                 Product p=await _IProductRepository.getProductById(item.ProductId);
-                if (p == null)
-                {
-                    return 0;
-                }
-                int Counter = (int)(item.Quantity * p.Price);
+                int Counter = item.Quantity * (int)p.Price;
                 totalSum += Counter;
             }
 
