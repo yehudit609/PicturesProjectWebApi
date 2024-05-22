@@ -16,6 +16,7 @@ namespace Services
         public Task<Order> addOrder(Order order)
         {
             order.OrderDate=DateOnly.FromDateTime(DateTime.Now.Date);
+            //order.OrderSum = order.OrderItems.Count();
             return _IOrderRepository.addOrder(order);
         }
 

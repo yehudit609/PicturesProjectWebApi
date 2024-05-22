@@ -17,7 +17,6 @@ namespace Repositories
         {
             try
             {
-                
                 await _picturesStoreContext.Orders.AddAsync(order);
                 await _picturesStoreContext.SaveChangesAsync();
                 return order;
@@ -27,6 +26,23 @@ namespace Repositories
                 return null;
             }
         }
+
+        //public async Task<Order> addOrder(OrderDto orderDto)
+        //{
+        //    try
+        //    {
+        //        // Map OrderDto to Order entity
+        //        Order order = _mapper.Map<Order>(orderDto);
+
+        //        await _picturesStoreContext.Orders.AddAsync(order);
+        //        await _picturesStoreContext.SaveChangesAsync();
+        //        return order;
+        //    }
+        //    catch (Exception err)
+        //    {
+        //        return null;
+        //    }
+        //}
 
         public Task<Order> getAllOrders()
         {

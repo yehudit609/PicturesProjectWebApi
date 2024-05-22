@@ -8,10 +8,11 @@ namespace LoginProject
     {
         public AutoMapping()
         {
-            CreateMap<Product, ProductDto>();
-            CreateMap<UserLoginDto, User>();
-            CreateMap<UserRegister, User>();
-            CreateMap<OrderDto, Order>();
+            CreateMap<Product, ProductDto>().ReverseMap();
+            CreateMap<UserLoginDto, User>().ReverseMap();
+            CreateMap<UserRegister, User>().ReverseMap();
+            CreateMap<OrderDto, Order>().ReverseMap();
+            CreateMap<OrderItemDto, OrderItem>().ReverseMap();
         }
     }
 }
