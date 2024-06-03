@@ -35,7 +35,7 @@ namespace Services
             throw new NotImplementedException();
         }
 
-        public async Task<int> sumToPay(ICollection<OrderItem> orderItems)
+        private async Task<int> sumToPay(ICollection<OrderItem> orderItems)
         {
             int totalSum = 0;
             foreach (var item in orderItems)

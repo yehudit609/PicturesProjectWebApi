@@ -11,6 +11,8 @@ builder.Services.AddTransient<IProductService, ProductService>();
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
 builder.Services.AddTransient<IOrderService, OrderService>();
 builder.Services.AddTransient<IOrderRepository, OrderRepository>();
+builder.Services.AddTransient<ICategoryService, CategoryService>();
+builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 builder.Services.AddControllers();
 builder.Services.AddDbContext<PicturesStore_326058609Context>(option => option.UseSqlServer("Data Source=srv2\\PUPILS;Initial Catalog=PicturesStore_326058609;Trusted_Connection=True;TrustServerCertificate=True"));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

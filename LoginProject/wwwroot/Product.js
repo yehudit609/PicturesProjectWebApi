@@ -1,3 +1,5 @@
+let categoryArr = [];
+
 const addToBasket = (prod) => {
     console.log("addToBasket")
     const basket = JSON.parse(sessionStorage.getItem('basketArray')) || [];
@@ -32,9 +34,68 @@ const updateSum = async (sum) => {
 //}
 
 
+const getCategories = async () => {
+    const responseGet = await fetch('api/Category')
+    
+    if (responseGet.ok) {
+        const dataGet = await responseGet.json();
+        /*categoryArr = await responseGet.json();*/
+        console.log(dataGet)
+        drawCategories(dataGet)
+    }
+}
 
 
+const drawCategories = (arr) => {
+    //debugger;
+    const template = document.getElementById("temp-category");
 
+    arr.forEach(category => {
+        const card = template.content.cloneNode(true)
+        card.querySelector('.opt').id = category.categoryId
+        card.querySelector('.opt').value = category.categoryName
+        card.querySelector('label').for = category.categoryName
+        card.querySelector('.OptionName').textContent = category.categoryName
+        card.querySelector('.opt').addEventListener("change", (event) => { filterCategories(event, category) })
+
+        document.getElementById("categoryList").appendChild(card)
+    })
+}
+
+const filterProducts = async () => {
+    //debugger;
+    const maxPrice = document.getElementById("maxPrice").value;
+    const minPrice = document.getElementById("minPrice").value;
+    const productName = document.getElementById("nameSearch").value;
+    let c = ''
+    categoryArr.forEach(e => c += `&categoryIds=${e}`)
+    console.log(categoryArr[0])
+    const responsePost = await fetch(`api/Product?minPrice=${minPrice}&maxPrice=${maxPrice}${c}&desc=${productName}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    const dataPost = await responsePost.json();
+    console.log(dataPost)
+    document.getElementById("ProductList").replaceChildren();
+    drawProducts(dataPost);
+
+}
+
+const filterCategories = async (event, category) => {
+    //debugger
+    if (event.target.checked) {
+        categoryArr.push(category.categoryId)
+        filterProducts();
+    }
+    else {
+        categoryArr.splice(categoryArr.indexOf(category.categoryId), 1)
+        filterProducts();
+    }
+
+}
 
 const drawProducts = (products) => {
     const template = document.getElementById('temp-card');
@@ -74,10 +135,6 @@ const getAllProduct = async () => {
 
 
 
-
-
-
-
 const drawBasket = () => {
     const productsArr = JSON.parse(sessionStorage.getItem("basket"));   
     const template = document.getElementById('temp-row');
@@ -93,13 +150,5 @@ const drawBasket = () => {
 }
 
 
-
-
-
-
-
-
-
-
-
+getCategories()
 getAllProduct();

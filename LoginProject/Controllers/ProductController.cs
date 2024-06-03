@@ -33,9 +33,9 @@ namespace LoginProject.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<ProductDto>>> GetAll()
+        public async Task<ActionResult<List<ProductDto>>> GetAll([FromQuery]int position, [FromQuery] int skip, [FromQuery] string? desc, [FromQuery] int? minPrice, [FromQuery] int? maxPrice, [FromQuery] int?[] categoryIds)
         {
-            List<Product> product = await _IProductService.getAllProducts();
+            List<Product> product = await _IProductService.getProducts(position, skip, desc, minPrice, maxPrice, categoryIds);
             List<ProductDto> productDto = _mapper.Map<List<Product>, List<ProductDto>>(product);
             if (product != null)
                 return Ok(productDto);
