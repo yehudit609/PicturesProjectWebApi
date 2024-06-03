@@ -63,14 +63,15 @@ const drawCategories = (arr) => {
 }
 
 const filterProducts = async () => {
-    //debugger;
     const maxPrice = document.getElementById("maxPrice").value;
     const minPrice = document.getElementById("minPrice").value;
     const productName = document.getElementById("nameSearch").value;
     let c = ''
     categoryArr.forEach(e => c += `&categoryIds=${e}`)
-    console.log(categoryArr[0])
-    const responsePost = await fetch(`api/Product?minPrice=${minPrice}&maxPrice=${maxPrice}${c}&desc=${productName}`, {
+    //console.log(categoryArr[0])
+    //const responseGet = await fetch(`api/product?minPrice=${minPrice}&maxPrice=${maxPrice}&description=${description}${categories}`);
+
+    const responsePost = await fetch(`api/Product?minPrice=${minPrice}&maxPrice=${maxPrice}&desc=${productName}${c}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
