@@ -64,9 +64,9 @@ namespace LoginProject.Controllers
         {
             Order orders = _mapper.Map<OrderDto,Order>(orderDto);
             Order newOrder = await _IOrderService.addOrder(orders);
-            //OrderDto orderDto1 = _mapper.Map<Order, OrderDto>(newOrder);
+            OrderDto orderDto1 = _mapper.Map<Order, OrderDto>(newOrder);
             if (newOrder != null)
-                return Ok(newOrder);
+                return Ok(orderDto1);
             return BadRequest();
             
         }
