@@ -31,10 +31,10 @@ const clearBasket = () => {
 
 const addOrder = async () => {
     const order = {
-        //orderSum: document.getElementById("sum").value,
-        //orderSum: 20,
+        
         userId: JSON.parse(sessionStorage.getItem('user')).userId,
-        orderItems: JSON.parse(sessionStorage.getItem('basketArray'))
+        orderItems: JSON.parse(sessionStorage.getItem('basketArray')),
+        orderSum: JSON.parse(sessionStorage.getItem('sumToPay'))
     }
     const response = await fetch("api/order", {
         method: 'POST',
@@ -58,6 +58,11 @@ const addOrder = async () => {
     }
 
 }
+
+//const calculateSum = () => {
+//    array = JSON.parse(sessionStorage.getItem('basketArray'));
+
+//}
 
 const placeOrder = async () => {
     debugger
