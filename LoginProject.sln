@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoginProject", "LoginProject\LoginProject.csproj", "{622CA626-47F7-44E1-9841-D433C785DCE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project", "LoginProject\Project.csproj", "{622CA626-47F7-44E1-9841-D433C785DCE0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{A4D9DB64-36FC-4870-B5D4-2EB532640FD3}"
 EndProject
@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entiti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Repositories\Repositories.csproj", "{9AD9B83C-20F3-42D2-ABF5-A8F23F4AD5AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOs", "DTOs\DTOs.csproj", "{6A9F666A-82E8-469C-9D6B-C00BE881F9F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTOs", "DTOs\DTOs.csproj", "{6A9F666A-82E8-469C-9D6B-C00BE881F9F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

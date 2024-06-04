@@ -13,6 +13,11 @@ namespace Repositories
             _picturesStoreContext = picturesStoreContext;
         }
 
+        public Task<User> addCategory(User user)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<List<Category>> getCategories()
         {
             var foundCategories = await _picturesStoreContext.Categories.ToListAsync();
@@ -22,6 +27,11 @@ namespace Repositories
         }
 
         public Task<CategoryDto> getCategoryById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Category> updateCategory(int id, User userToUpdate)
         {
             throw new NotImplementedException();
         }
