@@ -125,6 +125,7 @@ const login = async () => {
     const data = await response.json()
     if (!response.ok) {
         console.log("ssssssssssssssssss")
+        alert("no user!");
         throw new Error(`error! status:${response.status}`)
     }
     else {

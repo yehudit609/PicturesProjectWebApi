@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Project.Middleware;
+using PresidentsApp.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,7 +38,7 @@ if (app.Environment.IsDevelopment())
 }
 
 // Configure the HTTP request pipeline.
-
+app.UseErrorHandlingMiddleware();
 app.UseHttpsRedirection();  
 app.UseStaticFiles();
 app.UseAuthorization();

@@ -1,4 +1,5 @@
 ﻿using DTOs;
+using Microsoft.Extensions.Logging;
 using Repositories;
 using System.Data;
 using System.Diagnostics;
@@ -10,16 +11,21 @@ namespace Services
     {
         private IOrderRepository _IOrderRepository;
         private IProductRepository _IProductRepository;
-        public OrderService(IOrderRepository IOrderRepository, IProductRepository IProductRepository)
+        private ILogger<OrderService> _logger;
+        public OrderService(IOrderRepository IOrderRepository, IProductRepository IProductRepository, ILogger<OrderService> logger)
         {
             _IOrderRepository = IOrderRepository;
             _IProductRepository = IProductRepository;
+            _logger = logger;
         }
 
         public async Task<Order> addOrder(Order order)
         {
             order.OrderDate=DateOnly.FromDateTime(DateTime.Now.Date);
-            order.OrderSum = await sumToPay(order.OrderItems);
+            int sumPay = await sumToPay(order.OrderItems);
+            if (sumPay != order.OrderSum)
+                _logger.LogWarning("sum to pay is not valid");
+            order.OrderSum = sumPay;
             //order.OrderSum = order.OrderItems.Count();
             return await _IOrderRepository.addOrder(order);
         }
