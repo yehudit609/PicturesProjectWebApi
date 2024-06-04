@@ -5,7 +5,7 @@ using NLog.Web;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Project;
+using Project.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
