@@ -17,11 +17,13 @@ namespace LoginProject.Controllers
     {
         private IUserService _IUserService;
         private IMapper _mapper;
+        private ILogger<UsersController> _logger;
 
-        public UsersController(IUserService IUserService, IMapper mapper)
+        public UsersController(IUserService IUserService, IMapper mapper, ILogger<UsersController> logger)
         {
             _IUserService = IUserService;
             _mapper = mapper;
+            _logger = logger;
         }
 
 
@@ -39,6 +41,8 @@ namespace LoginProject.Controllers
         [Route("login")]
         public async Task<ActionResult<User>> GetByEmailAndPassword([FromBody] UserLoginDto userLogin)
         {
+
+            _logger.LogInformation($"login attempted with user name {userLogin.Email} and password {userLogin.Password}");
             User user1 = _mapper.Map<UserLoginDto, User>(userLogin);
             User user = await _IUserService.GetUserByEmailAndPassword(user1);
             if (user != null)

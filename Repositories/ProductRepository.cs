@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Text.Json;
 namespace Repositories
-   
+
 {
     public class ProductRepository : IProductRepository
     {

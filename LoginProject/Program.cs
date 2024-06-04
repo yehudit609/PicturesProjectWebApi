@@ -1,6 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 using Services;
+using NLog.Web;
+using Microsoft.EntityFrameworkCore.SqlServer;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,11 +17,12 @@ builder.Services.AddTransient<IOrderService, OrderService>();
 builder.Services.AddTransient<IOrderRepository, OrderRepository>();
 builder.Services.AddTransient<ICategoryService, CategoryService>();
 builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
-builder.Services.AddControllers();
-builder.Services.AddDbContext<PicturesStore_326058609Context>(option => option.UseSqlServer("Data Source=srv2\\PUPILS;Initial Catalog=PicturesStore_326058609;Trusted_Connection=True;TrustServerCertificate=True"));
+builder.Services.AddDbContext<PicturesStore_326058609Context>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("school")));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Host.UseNLog();
 
 
 var app = builder.Build();
