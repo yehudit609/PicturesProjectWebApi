@@ -149,7 +149,18 @@ const drawBasket = () => {
     });
 
 }
+const pay = () => {
+    const sumElement = document.getElementById('sum');
+    if (sumElement && sessionStorage.getItem("sumToPay") !== null) {
+        sumElement.textContent = sessionStorage.getItem("sumToPay");
+    }
+};
 
 
+
+// Call updateSum function every 1 second
+setInterval(pay, 50);
+// Update immediately on load
+pay();
 getCategories()
 getAllProduct();
