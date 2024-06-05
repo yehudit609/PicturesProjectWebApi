@@ -1,56 +1,54 @@
+﻿
 let categoryArr = [];
 
-const addToBasket = (prod) => {
-    console.log("addToBasket")
-    const basket = JSON.parse(sessionStorage.getItem('basketArray')) || [];
+const conditionMet=false
 
-    const index = basket.findIndex(item => item.productId === prod.productId);
-    if (index !== -1) {
-        basket[index].quantity++;
+function addToBasket(prod) {
+    const basket = JSON.parse(sessionStorage.getItem('basket')) || [];
+    const productIndex = basket.findIndex(product => product.productId === prod.productId);
+    console.log(productIndex)
+    if (productIndex !== -1) {
+        basket[productIndex].quaninty++;
     } else {
-        prod = {...prod, quantity: 1 };
+        prod = { ...prod, quaninty :1 }
         basket.push(prod);
     }
-    
-    sessionStorage.setItem('basketArray', JSON.stringify(basket));
+
+    sessionStorage.setItem('basket', JSON.stringify(basket));
     updateSum(prod.price)
+    counter()
+    alert("פריט נוסף לסל בהצלחה")
 }
 
 
-const updateSum = async (sum) => {
-    //const sum1 = sessionStorage.getItem('sumToPay') || 0;    
+const updateSum = async (sum) => {  
     const currentSum = parseInt(document.getElementById('sum').textContent);
     const newSum = currentSum + sum;
     document.getElementById('sum').textContent = newSum;
     sessionStorage.setItem('sumToPay', newSum)
 }
 
-//const updateSum1 = async () => {
-//    const sum = sessionStorage.getItem('sumToPay');
-//    const currentSum = parseInt(document.getElementById('sum1').textContent);
-//    const newSum = currentSum + sum;
-//    document.getElementById('sum1').textContent = newSum;
-//    sessionStorage.setItem('sumToPay', newSum)
-//}
-
-
 const getCategories = async () => {
-    const responseGet = await fetch('api/Category')
-    
-    if (responseGet.ok) {
-        const dataGet = await responseGet.json();
-        /*categoryArr = await responseGet.json();*/
-        console.log(dataGet)
-        drawCategories(dataGet)
+
+    const response = await fetch('api/category')
+
+    if (!response.ok) {
+        throw new Error(`error! status:${response.status}`)
+    }
+    else {
+        const data = await response.json()
+        console.log(data)
+        drowCategories(data)
+
     }
 }
 
 
-const drawCategories = (arr) => {
-    //debugger;
+const drowCategories = (data) => {
+
     const template = document.getElementById("temp-category");
 
-    arr.forEach(category => {
+    data.forEach(category => {
         const card = template.content.cloneNode(true)
         card.querySelector('.opt').id = category.categoryId
         card.querySelector('.opt').value = category.categoryName
@@ -60,6 +58,8 @@ const drawCategories = (arr) => {
 
         document.getElementById("categoryList").appendChild(card)
     })
+
+
 }
 
 const filterProducts = async () => {
@@ -68,9 +68,6 @@ const filterProducts = async () => {
     const productName = document.getElementById("nameSearch").value;
     let c = ''
     categoryArr.forEach(e => c += `&categoryIds=${e}`)
-    //console.log(categoryArr[0])
-    //const responseGet = await fetch(`api/product?minPrice=${minPrice}&maxPrice=${maxPrice}&description=${description}${categories}`);
-
     const responsePost = await fetch(`api/Product?minPrice=${minPrice}&maxPrice=${maxPrice}&desc=${productName}${c}`, {
         method: 'GET',
         headers: {
@@ -81,12 +78,13 @@ const filterProducts = async () => {
     const dataPost = await responsePost.json();
     console.log(dataPost)
     document.getElementById("ProductList").replaceChildren();
-    drawProducts(dataPost);
+    drowProducts(dataPost);
 
 }
 
+
+
 const filterCategories = async (event, category) => {
-    //debugger
     if (event.target.checked) {
         categoryArr.push(category.categoryId)
         filterProducts();
@@ -98,69 +96,87 @@ const filterCategories = async (event, category) => {
 
 }
 
-const drawProducts = (products) => {
+const drowProducts = (products) => {
     const template = document.getElementById('temp-card');
+
     products.forEach(product => {
         const clone = template.content.cloneNode(true);
 
-        clone.querySelector('img').src = `../Images/${product.description.trim()}.jpg`;
+        clone.querySelector('img').src = `../Images/${product.picture.trim()}.jpg`;
         clone.querySelector('h1').textContent = product.productName;
         clone.querySelector('.price').textContent = product.price;
         clone.querySelector('.description').textContent = product.description;
 
         clone.querySelector('button').addEventListener('click', () => {
-            console.log(product)
-            addToBasket(product);
-            console.log('Product added to cart:', product.description);
+            addToBasket(product)
         });
 
         document.getElementById('ProductList').appendChild(clone);
     });
 }
 
+const getAllProducts = async () => {
+    const response = await fetch('api/product')
+    if (!response.ok) {
+        throw new Error(`error! status:${response.status}`)
+    }
+    else {
+        const data = await response.json()
+        console.log(data)
+        drowProducts(data)
 
-
-
-
-
-
-
-const getAllProduct = async () => {
-    const responseGet = await fetch('api/Product')
-    if (responseGet.ok) {
-        const dataGet = await responseGet.json();
-        console.log(dataGet)
-        drawProducts(dataGet)
     }
 }
 
+//const drawBasket = () => {
+//    const productsArr = JSON.parse(sessionStorage.getItem("basket"));
+//    const template = document.getElementById('temp-row');
+//    productsArr.forEach(product => {
+//        const row = template.content.cloneNode(true);
+//        row.querySelector(".price").innerText = product.price;
+//        row.querySelector(".image").src = '../Images/' + product.description;
+//        row.querySelector(".descriptionColumn").innerText = product.description;
+//        row.querySelector('img').src = '../Images/' + product.imageUrl;
+//        document.getElementById("PoductList").appendChild(row);
+//    });
 
-
-const drawBasket = () => {
-    const productsArr = JSON.parse(sessionStorage.getItem("basket"));   
-    const template = document.getElementById('temp-row');
-    productsArr.forEach(product => {
-        const row = template.content.cloneNode(true);
-        row.querySelector(".price").innerText = product.price;
-        row.querySelector(".image").src = '../Images/' + product.imageUrl;
-        row.querySelector(".descriptionColumn").innerText = product.description;
-        row.querySelector('img').src = '../Images/' + product.imageUrl;
-        document.getElementById("PoductList").appendChild(row);
-    });
-
-}
+//}
 const pay = () => {
     const sumElement = document.getElementById('sum');
+    const countElement = document.getElementById('ItemsCountText');
     if (sumElement && sessionStorage.getItem("sumToPay") !== null) {
         sumElement.textContent = sessionStorage.getItem("sumToPay");
+    }
+  
+    if (countElement && sessionStorage.getItem("ItemsCountText") !== null) {
+        countElement.textContent = sessionStorage.getItem("ItemsCountText");
     }
 };
 
 
 
-// Call updateSum function every 1 second
-setInterval(pay, 50);
+const counter = () => {
+    const current = parseInt(document.getElementById('ItemsCountText').textContent);
+    const newCount= current + 1;
+    document.getElementById('ItemsCountText').textContent = newCount;
+    sessionStorage.setItem('ItemsCountText', newCount)
+}
+
 // Update immediately on load
+// Call updateSum function every 1 second
+
+setInterval(pay, 50);
+//setInterval(counter, 50);
+
+
 pay();
+
+
 getCategories()
-getAllProduct();
+getAllProducts()
+
+//setInterval(updateValue, 2000);
+
+
+
+

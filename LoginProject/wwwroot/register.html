@@ -1,38 +1,37 @@
-﻿<!DOCTYPE html>
+﻿c<!DOCTYPE html>
 <html>
 <head>
 
-    <script src="User.js"></script>
-    <link href="styles.css" rel="stylesheet" />
+    <script src="user.js"></script>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
     <title></title>
 </head>
 <body>
-    <div  class="container">
-       
+    <div class="container">
+        
             <h1>register</h1>
             <label>email</label>
             <br /><br />
-            <input id="email" type="email" />
+            <input id="email" type="email" required/>
             <br /><br />
             <label>password</label>  <br /><br />
             <!--<button style="background: darkturquoise" onclick="evalutePassword()">password</button>-->
-            <progress id="password-strength-progress" max="4" value="0"  ></progress>
-            <input id="password" type="password" oninput="evalutePassword()" />
+            <progress id="password-strength-progress" max="4" value="0"></progress>
+            <input id="password" type="password"  oninput="evalutePassword()" required  />
             <br /><br />
             <label>firstname</label>
             <br /><br />
-            <input id="firstname" type="text" />
+            <input id="firstname" type="text" required />
             <br /><br />
             <label>lastname</label>
             <br /><br />
-            <input id="lastname" type="text" />
+            <input id="lastname" type="text" required />
             <br /><br />
             <button onclick="register()">register</button>
             <br /><br />
-            <a  href="HomePage.html">login</a><br /><br />
-            <a  href="Update.html">update</a>
-       
+            <a href="HomePage.html">homepage</a>
+    
     </div>
 </body>
 </html>

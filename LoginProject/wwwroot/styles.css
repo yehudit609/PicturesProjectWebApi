@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
-    text-decoration: none;
 }
 
 .container {
@@ -13,97 +12,49 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    text-decoration: none;
 }
 
 h1 {
     text-align: center;
     margin-bottom: 30px;
-<<<<<<< HEAD
-    color: #4e1c81;  Purple 
-=======
     color: #4e1c81; /* Purple */
->>>>>>> parent of 5703996 (add tests for userRepository)
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    text-decoration: none;
 }
 
 label {
     display: block;
     margin-bottom: 10px;
-<<<<<<< HEAD
-    color: #00bcd4;  Light Blue 
-=======
     color: #00bcd4; /* Light Blue */
->>>>>>> parent of 5703996 (add tests for userRepository)
-    text-align: center;
-    text-decoration: none;
 }
 
 input {
     width: calc(100% - 12px);
     padding: 12px;
     margin-bottom: 20px;
-<<<<<<< HEAD
-    border: 2px solid #e91e63;  Pink 
-    border-radius: 8px;
-    background-color: #e0f7fa;  Light Turquoise 
-=======
     border: 2px solid #e91e63; /* Pink */
     border-radius: 8px;
     background-color: #e0f7fa; /* Light Turquoise */
->>>>>>> parent of 5703996 (add tests for userRepository)
     color: #000;
     transition: border-color 0.3s;
-    text-align: center;
-    text-decoration: none;
 }
 
     input:focus {
-<<<<<<< HEAD
-        border-color: #ff9800;  Orange 
-=======
         border-color: #ff9800; /* Orange */
->>>>>>> parent of 5703996 (add tests for userRepository)
         box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
     }
 
 button {
     width: 100%;
     padding: 15px;
-<<<<<<< HEAD
-    background-image: linear-gradient(to right, #4e1c81, #00bcd4, #e91e63, #4caf50);  Gradient: Purple to Green 
-    color: #ffffff;  White 
-=======
     background-image: linear-gradient(to right, #4e1c81, #00bcd4, #e91e63, #4caf50); /* Gradient: Purple to Green */
     color: #ffffff; /* White */
->>>>>>> parent of 5703996 (add tests for userRepository)
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s;
-    text-align: center;
-    text-decoration: none;
 }
 
     button:hover {
         transform: scale(1.1);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
-<<<<<<< HEAD
-progress {
-=======
-/*progress {
->>>>>>> parent of 5703996 (add tests for userRepository)
-    width: 100%;
-    padding: 15px;
-    background-image: linear-gradient(to right, #4e1c81, #00bcd4, #e91e63, #4caf50);
-    color: #ffffff;
-
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s;
-}

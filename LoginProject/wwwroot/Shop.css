@@ -1,0 +1,109 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.cart {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4e1c81; /* Purple */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    text-align: center;
+    color: #333;
+}
+
+span {
+    font-weight: bold;
+}
+
+.nxbtn, .shopmore {
+    display: inline-block;
+    padding: 10px 20px;
+    background-image: linear-gradient(to right, #00bcd4, #4caf50); /* Gradient: Light Blue to Green */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+    .nxbtn:hover, .shopmore:hover {
+        background-color: #00796b; /* Darker Green */
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4caf50; /* Green */
+    color: white;
+}
+
+td a {
+    color: #e91e63; /* Pink */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    td a:hover {
+        color: #c2185b; /* Darker Pink */
+    }
+
+button {
+    width: 100%;
+    /*padding: 15px;*/
+    /*linear-gradient(to right, #4e1c81, #00bcd4, #e91e63, #4caf50);*/
+    /*background-image: linear-gradient(to right, #4e1c81, #00bcd4, #e91e63, #4caf50);*/ /* Gradient: Purple to Green */
+    /*color: #ffffff;*/ /* White */
+    /*border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;*/
+}
+
+    button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+.ClearBoth {
+    clear: both;
+}
+
+@media (max-width: 600px) {
+    .cart {
+        padding: 10px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    button {
+        padding: 10px;
+    }
+}

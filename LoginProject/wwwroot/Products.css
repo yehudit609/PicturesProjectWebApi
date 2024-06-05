@@ -1,4 +1,5 @@
-﻿html, body {
+﻿@import url('products.css');
+html, body {
     direction:rtl;
     margin:0;
     padding:0;
@@ -50,7 +51,7 @@ p.description{
     height:65px;
 }
 .bar::before {
-    content: 'חנות הצעצועים שלי';
+    content: 'הגלריה שלי';
     color: white;
     /* display: inline-block; */
     position: absolute;

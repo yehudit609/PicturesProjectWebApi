@@ -1,0 +1,281 @@
+﻿@import url('products.css');
+
+html, body {
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-size: 100%;
+    font-family: system-ui;
+}
+
+/* General elements */
+body {
+    background-color: #f9f9f9;
+}
+
+ul {
+    margin: 0;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.floatRight {
+    float: right;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+/* Header styles */
+header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+    header .bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 35px;
+    }
+
+        header .bar::before {
+            content: 'חנות הצעצועים שלי';
+            font-family: Helvetica;
+            font-size: 18px;
+            position: absolute;
+            top: 8px;
+            left: 51%;
+            transform: translateX(-50%);
+            color: white;
+        }
+
+.QuickLinks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+    .QuickLinks ul li {
+        margin-left: 15px;
+    }
+
+        .QuickLinks ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 12px;
+            font-family: Helvetica;
+            position: relative;
+        }
+
+            .QuickLinks ul li a::after {
+                content: '|';
+                margin: 0 10px;
+                color: white;
+            }
+
+        /* Remove last delimiter */
+        .QuickLinks ul li:last-child a::after {
+            content: '';
+        }
+
+/* Bag summary and Checkout */
+.BagSummary {
+    position: relative;
+}
+
+    .BagSummary .Icon {
+        background-image: url(../Images/BagActive.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        padding: 10px;
+    }
+
+    .BagSummary .ItemCount {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: red;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        font-size: 12px;
+        color: white;
+    }
+
+.Checkout a {
+    background: #1a6461;
+    font-size: 11px;
+    color: #fff;
+    padding: 6px 10px;
+    border: 0;
+    border-radius: 3px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+    .Checkout a:hover {
+        background-color: #134d45;
+    }
+
+/* Filter section */
+.Filters {
+    width: 184px;
+    padding: 50px 0 10px;
+    background-color: #f9f9f9;
+    font-family: Arial;
+    font-size: 14px;
+    min-height: 100%;
+    float: right;
+    position: sticky;
+    top: 0;
+    z-index: 102;
+}
+
+.filterBreak {
+    margin-bottom: 20px;
+}
+
+.nameFilter input {
+    width: 70%;
+    height: 24px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+.priceInputText {
+    width: 50px;
+    height: 31px;
+    padding: 3px 7px;
+    border: 1px solid #888C8C;
+    border-radius: 3px;
+    outline: 0;
+    box-shadow: 0 1px 2px rgb(15 17 17 / 15%) inset;
+}
+
+.priceCurrency {
+    position: absolute;
+    margin-top: 6.5px;
+    margin-right: -19px;
+    line-height: 22px;
+    font-size: 25px;
+}
+
+/* Card styles */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    font-family: Arial;
+    float: left;
+    height: 550px;
+    margin: 6px;
+    border-radius: 8px;
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+.img-w {
+    height: 300px;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.description {
+    height: 65px;
+}
+
+.card button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: opacity 0.3s;
+}
+
+    .card button:hover {
+        opacity: 0.7;
+    }
+
+/* Result count */
+.ResultCount {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+    .ResultCount .Clear {
+        color: #e91e63; /* Pink */
+        text-decoration: none;
+    }
+
+        .ResultCount .Clear:hover {
+            text-decoration: underline;
+        }
+
+/* Miscellaneous */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

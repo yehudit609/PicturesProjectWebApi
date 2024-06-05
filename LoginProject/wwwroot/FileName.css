@@ -1,0 +1,75 @@
+﻿
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header section */
+header {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: right;
+}
+
+/* Style the product cards */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    float: left;
+}
+
+.img-w img {
+    width: 100%;
+}
+
+.price {
+    color: green;
+}
+
+/* Style the filters section */
+#filters {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    margin: 5px;
+}
+
+.filterBreak {
+    clear: both;
+}
+
+/* Style the pagination */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+    .pagination a {
+        text-decoration: none;
+        color: black;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        margin: 0 5px;
+    }
+
+/* Style the checkout button */
+.goToCart {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Add more specific styling as needed based on your design */
+```
+
+/* `<link href="Products.css" rel="stylesheet" / > ` inside the `<head > */

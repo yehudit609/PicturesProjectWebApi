@@ -1,15 +1,16 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-
+    <script src="product.js"></script>
+    <!--<link href="new.css" rel="stylesheet" />-->
+    <!--<link href="x.css" rel="stylesheet" />-->
     <link href="Products.css" rel="stylesheet" />
-
     <meta charset="utf-8" />
-    <title></title>
+    <title>galery</title>
     <template id="temp-card">
         <div class="card">
             <div class="img-w">
-                <img src="tmp.jpg" alt="" style="width:85%; height:85%">
+                <img src="tmp.jpg" alt="" style="width:100%">
             </div>
             <h1></h1>
             <p class="price"></p>
@@ -32,6 +33,7 @@
     <header>
         <div class="bar">
 
+
             <section class="QuickLinks">
                 <ul>
                     <li class="" data-section="myAccount">
@@ -41,10 +43,11 @@
                         <a href="#" title="קניה מהירה">קניה מהירה</a>
                     </li>
                     <li>
-                        <a href="#" title="עזרה - שאלות נפוצות, כיצד לקנות באינטרנט, מדריך ועוד" target="_blank">עזרה</a>
+                        <a href="#" title="עזרה - שאלות נפוצות, כיצד לקנות באינטרנט, מדריך ועוד"  target="_blank">עזרה</a>
                     </li>
                 </ul>
             </section>
+           
 
             <span class="BagSummary MiniBagNonSecure">
                 <a href="shoppingbag.html">
@@ -57,7 +60,7 @@
                 </a>
             </span>
             <div class="Checkout ">
-                <a class="goToCart" href="ShoppingBag.html">סל קנייה</a>
+                <a class="goToCart" href="ShoppingBag.html">סל</a>
             </div>
 
 
@@ -84,180 +87,24 @@
             <input type="text" id="nameSearch" class="floatRight" placeholder="חיפוש לפי שם מוצר">
 
             <button class="floatRight" tabindex="0" onclick="filterProducts()">
-            <span class="header42"><img src="Images/searchIcon.svg" alt="סמל חיפוש"></span>
-            </button>
-        </div>
-
-        <div id="priceRangeFilter" class="filterBreak">
-            <div><span id="counter">  </span> מחיר:</div>
-
-            <input type="text" maxlength="9" id="minPrice" class="priceInputText">
-            <span class="priceCurrency">₪</span>
-
-            <input type="text" maxlength="9" id="maxPrice" class="priceInputText">
-            <span class="priceCurrency">₪</span>
-            <button onclick="filterProducts()">
-            <span><img src="Images/searchIcon.svg" alt="סמל חיפוש"></span>
-            </button>
-        </div><br /><br />
-        <div id="sumToPay" class="sum">
-            <label>סכום לתשלום:</label>
-
-            <br /><br />
-            <span id="sum">0</span>
-
-        </div>
-    </div>
-
-    <div id="ProductList">
-
-    </div>
-    <div class="pagination">
-        <a href="#">&laquo;</a>
-        <div id="pages"></div>
-        <a href="#">&raquo;</a>
-    </div>
-</body>
-
-<script src="Product.js"></script>
-<script src="Order.js"></script>
-<<<<<<< HEAD
-</html>-->
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-
-    <link href="Products.css" rel="stylesheet" />
-
-    <meta charset="utf-8" />
-    <title></title>
-    <template id="temp-card">
-        <div class="card">
-            <div class="img-w">
-                <img src="tmp.jpg" alt="" style="width:85%; height:85%">
-            </div>
-            <h1></h1>
-            <p class="price"></p>
-            <p class="description"></p>
-            <p><button>הוסף לסל</button></p>
-        </div>
-    </template>
-    <template id="temp-category">
-        <div class="cb checkbox">
-            <input type="checkbox" class="opt" id="" value="">
-            <label for="">
-                <span class="OptionName"></span>
-                <span class="Count"></span>
-                <!--</a>-->
-            </label>
-        </div>
-    </template>
-</head>
-<body>
-    <header>
-        <div class="bar">
-
-            <section class="QuickLinks">
-                <ul>
-                    <li class="" data-section="myAccount">
-                        <!--<a href="#" title="כניסה לצפייה בפרטי החשבון"  onclick="TrackLinkID(this);"  accesskey="h">החשבון שלי</a>-->
-                    </li>
-                    <li>
-                        <a href="#" title="קניה מהירה">קניה מהירה</a>
-                    </li>
-                    <li>
-                        <a href="#" title="עזרה - שאלות נפוצות, כיצד לקנות באינטרנט, מדריך ועוד" target="_blank">עזרה</a>
-                    </li>
-                </ul>
-            </section>
-
-            <span class="BagSummary MiniBagNonSecure">
-                <a href="shoppingbag.html">
-                    <div class="Icon">
-                        <div class="ItemCount">
-                            <span id="ItemsCountText">0</span>
-                        </div>
-                    </div>
-
-                </a>
-            </span>
-            <div class="Checkout ">
-                <a class="goToCart" href="ShoppingBag.html">סל קנייה</a>
-            </div>
-
-
-        </div>
-    </header>
-
-    <div id="filters" class="Filters fixedVisible">
-        <div class="ResultCount" style="position: absolute; top: 0px;">
-            <a class="Clear" href="">נקה הכל</a>
-            <div><span id="counter">  </span> מוצרים</div>
-
-            <div>
-                <span id="counter">
-
-                </span>
-            </div>
-        </div>
-        <!--<div id="categoryList" class="filterBreak">
-                <span>בחירת קטגוריה</span>
-            </div>
-
-            <div id="nameFilter" class="nameFilter filterBreak">
-
-                <input type="text" id="nameSearch" class="floatRight" placeholder="חיפוש לפי שם מוצר">
-        <button class="floatRight" tabindex="0" onclick="filterProducts()">
             <span class="header42"><img src="Images/searchIcon.svg" alt="סמל חיפוש"></span>
         </button>
-        </div>-->
-
-        <div id="categoryList" class="filterBreak">
-            <span>בחירת קטגוריה</span>
         </div>
-
-        <div id="nameFilter" class="nameFilter filterBreak">
-
-            <input type="text" id="nameSearch" class="floatRight" placeholder="חיפוש לפי שם מוצר">
-
-            <button class="floatRight" tabindex="0" onclick="filterProducts()">
-                <span class="header42"><img src="Images/searchIcon.svg" alt="סמל חיפוש"></span>
-            </button>
-        </div>
-
-
-
         <div id="priceRangeFilter" class="filterBreak">
             <div><span id="counter">  </span> מחיר:</div>
-
-            <!--<input type="text" maxlength="9" id="minPrice" class="priceInputText">
-                <span class="priceCurrency">₪</span>
-
-                <input type="text" maxlength="9" id="maxPrice" class="priceInputText">
-                <span class="priceCurrency">₪</span>
-            <button onclick="filterProducts()">
-                <span><img src="Images/searchIcon.svg" alt="סמל חיפוש"></span>
-            </button>-->
 
             <input type="text" maxlength="9" id="minPrice" class="priceInputText">
             <span class="priceCurrency">₪</span>
 
             <input type="text" maxlength="9" id="maxPrice" class="priceInputText">
             <span class="priceCurrency">₪</span>
-            <button onclick="filterProducts()">
-                <span><img src="Images/searchIcon.svg" alt="סמל חיפוש"></span>
-            </button>
-        </div><br /><br />
-        <div id="pay" class="sum">
-            <label>סכום לתשלום:</label>
-
             <br /><br />
-            <span id="sum">0</span>
 
+            <button onclick="filterProducts()">
+            <span><img src="Images/searchIcon.svg" alt="סמל חיפוש"></span>
+        </button>
         </div>
+        <span id="sum">0</span>
     </div>
 
     <div id="ProductList">
@@ -269,11 +116,4 @@
         <a href="#">&raquo;</a>
     </div>
 </body>
-<script src="Order.js"></script>
-<script src="Product.js"></script>
-<script src="ShoppingBag.js"></script>
 </html>
-
-=======
-</html>
->>>>>>> parent of 5703996 (add tests for userRepository)
