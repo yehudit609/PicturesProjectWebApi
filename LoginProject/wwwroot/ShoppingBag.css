@@ -135,8 +135,8 @@ a.GoToCheckout.TopLink {
 }
 
 .nxbtn.primary, .nxbtn.secondary {
-    padding-top: 6px;
-    padding-bottom: 7px;
+    /*padding-top: 6px;*/
+    /*padding-bottom: 7px;*/
     color: #fff;
     border: 0;
     text-transform: uppercase;

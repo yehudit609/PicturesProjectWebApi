@@ -101,3 +101,91 @@
 2024-06-04 19:29:31.2745 Info Validating config: TargetNames=mylogfile, email, ConfigItems=58, FilePath=M:\web api\web api good\Project\LoginProject\NLog.config
 2024-06-04 19:29:31.2902 Info Configuration initialized.
 2024-06-04 19:29:33.9014 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2024-06-04 19:56:55.4415 Info Loading assembly name: NLog.MailKit
+2024-06-04 19:56:55.5298 Info NLog.MailKit, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.0.6704. Product version: 5.2.0+78fee640bcc81f8f578f417ab1504dd9618e7898. GlobalAssemblyCache: False
+2024-06-04 19:56:55.5680 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2024-06-04 19:56:55.6738 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2024-06-04 19:56:55.6872 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-04 19:56:55.7036 Info Validating config: TargetNames=mylogfile, email, ConfigItems=58, FilePath=M:\web api\web api good\Project\LoginProject\NLog.config
+2024-06-04 19:56:55.7194 Info Configuration initialized.
+2024-06-04 19:56:57.2264 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2024-06-04 20:11:16.1568 Info Loading assembly name: NLog.MailKit
+2024-06-04 20:11:16.2367 Info NLog.MailKit, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.0.6704. Product version: 5.2.0+78fee640bcc81f8f578f417ab1504dd9618e7898. GlobalAssemblyCache: False
+2024-06-04 20:11:16.2741 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2024-06-04 20:11:16.3735 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2024-06-04 20:11:16.3967 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-04 20:11:16.4141 Info Validating config: TargetNames=mylogfile, email, ConfigItems=58, FilePath=M:\web api\web api good\Project\LoginProject\NLog.config
+2024-06-04 20:11:16.4309 Info Configuration initialized.
+2024-06-04 20:11:18.4132 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2024-06-04 21:06:12.7589 Info Loading assembly name: NLog.MailKit
+2024-06-04 21:06:12.8472 Info NLog.MailKit, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.0.6704. Product version: 5.2.0+78fee640bcc81f8f578f417ab1504dd9618e7898. GlobalAssemblyCache: False
+2024-06-04 21:06:12.8857 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2024-06-04 21:06:12.9761 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2024-06-04 21:06:13.0013 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-04 21:06:13.0187 Info Validating config: TargetNames=mylogfile, email, ConfigItems=58, FilePath=M:\web api\web api good\Project\LoginProject\NLog.config
+2024-06-04 21:06:13.0350 Info Configuration initialized.
+2024-06-04 21:07:24.4612 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2024-06-05 12:44:47.9653 Info Loading assembly name: NLog.MailKit
+2024-06-05 12:44:48.0917 Info NLog.MailKit, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.0.6704. Product version: 5.2.0+78fee640bcc81f8f578f417ab1504dd9618e7898. GlobalAssemblyCache: False
+2024-06-05 12:44:48.1232 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2024-06-05 12:44:48.3076 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2024-06-05 12:44:48.3290 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-05 12:44:48.3442 Info Validating config: TargetNames=mylogfile, email, ConfigItems=58, FilePath=M:\web api\web api good\Project\LoginProject\NLog.config
+2024-06-05 12:44:48.3588 Info Configuration initialized.
+2024-06-05 12:45:03.0240 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2024-06-05 12:46:38.7467 Info Loading assembly name: NLog.MailKit
+2024-06-05 12:46:38.8126 Info NLog.MailKit, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.0.6704. Product version: 5.2.0+78fee640bcc81f8f578f417ab1504dd9618e7898. GlobalAssemblyCache: False
+2024-06-05 12:46:38.8441 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2024-06-05 12:46:38.9797 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2024-06-05 12:46:38.9993 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-05 12:46:39.0147 Info Validating config: TargetNames=mylogfile, email, ConfigItems=58, FilePath=M:\web api\web api good\Project\LoginProject\NLog.config
+2024-06-05 12:46:39.0288 Info Configuration initialized.
+2024-06-05 12:46:40.1174 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2024-06-05 12:47:44.4403 Info Loading assembly name: NLog.MailKit
+2024-06-05 12:47:44.5086 Info NLog.MailKit, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.0.6704. Product version: 5.2.0+78fee640bcc81f8f578f417ab1504dd9618e7898. GlobalAssemblyCache: False
+2024-06-05 12:47:44.5410 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2024-06-05 12:47:44.6188 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2024-06-05 12:47:44.6403 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-05 12:47:44.6633 Info Validating config: TargetNames=mylogfile, email, ConfigItems=58, FilePath=M:\web api\web api good\Project\LoginProject\NLog.config
+2024-06-05 12:47:44.6783 Info Configuration initialized.
+2024-06-05 12:47:45.7592 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2024-06-05 13:25:55.8965 Info Loading assembly name: NLog.MailKit
+2024-06-05 13:25:55.9673 Info NLog.MailKit, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.0.6704. Product version: 5.2.0+78fee640bcc81f8f578f417ab1504dd9618e7898. GlobalAssemblyCache: False
+2024-06-05 13:25:56.0004 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2024-06-05 13:25:56.0763 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2024-06-05 13:25:56.0949 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-05 13:25:56.1113 Info Validating config: TargetNames=mylogfile, email, ConfigItems=58, FilePath=M:\web api\web api good\Project\LoginProject\NLog.config
+2024-06-05 13:25:56.1253 Info Configuration initialized.
+2024-06-05 13:26:00.5028 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2024-06-05 13:29:25.2379 Info Loading assembly name: NLog.MailKit
+2024-06-05 13:29:25.3045 Info NLog.MailKit, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.0.6704. Product version: 5.2.0+78fee640bcc81f8f578f417ab1504dd9618e7898. GlobalAssemblyCache: False
+2024-06-05 13:29:25.3401 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2024-06-05 13:29:25.4947 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2024-06-05 13:29:25.5125 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-05 13:29:25.5342 Info Validating config: TargetNames=mylogfile, email, ConfigItems=58, FilePath=M:\web api\web api good\Project\LoginProject\NLog.config
+2024-06-05 13:29:25.5507 Info Configuration initialized.
+2024-06-05 13:29:26.8123 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2024-06-05 13:30:16.2770 Info Loading assembly name: NLog.MailKit
+2024-06-05 13:30:16.3410 Info NLog.MailKit, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.0.6704. Product version: 5.2.0+78fee640bcc81f8f578f417ab1504dd9618e7898. GlobalAssemblyCache: False
+2024-06-05 13:30:16.3704 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2024-06-05 13:30:16.4991 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2024-06-05 13:30:16.5166 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-05 13:30:16.5308 Info Validating config: TargetNames=mylogfile, email, ConfigItems=58, FilePath=M:\web api\web api good\Project\LoginProject\NLog.config
+2024-06-05 13:30:16.5436 Info Configuration initialized.
+2024-06-05 13:30:22.3560 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2024-06-05 13:31:13.7709 Info Loading assembly name: NLog.MailKit
+2024-06-05 13:31:13.8374 Info NLog.MailKit, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.0.6704. Product version: 5.2.0+78fee640bcc81f8f578f417ab1504dd9618e7898. GlobalAssemblyCache: False
+2024-06-05 13:31:13.8688 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2024-06-05 13:31:14.0141 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2024-06-05 13:31:14.0272 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-05 13:31:14.0418 Info Validating config: TargetNames=mylogfile, email, ConfigItems=58, FilePath=M:\web api\web api good\Project\LoginProject\NLog.config
+2024-06-05 13:31:14.0587 Info Configuration initialized.
+2024-06-05 13:31:15.1707 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+2024-06-05 13:51:57.6209 Info Loading assembly name: NLog.MailKit
+2024-06-05 13:51:57.6884 Info NLog.MailKit, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.0.6704. Product version: 5.2.0+78fee640bcc81f8f578f417ab1504dd9618e7898. GlobalAssemblyCache: False
+2024-06-05 13:51:57.7192 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
+2024-06-05 13:51:57.8016 Info Registered target NLog.MailKit.MailTarget(Name=email)
+2024-06-05 13:51:57.8016 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.2.2526. Product version: 5.3.2+8d52d4f3fcdbd84beae3442e1fdc8125598ed81f. GlobalAssemblyCache: False
+2024-06-05 13:51:57.8317 Info Validating config: TargetNames=mylogfile, email, ConfigItems=58, FilePath=M:\web api\web api good\Project\LoginProject\NLog.config
+2024-06-05 13:51:57.8496 Info Configuration initialized.
+2024-06-05 13:51:59.1798 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.

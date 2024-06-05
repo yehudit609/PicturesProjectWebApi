@@ -61,14 +61,16 @@ const register = async () => {
 //}
 
 const update = async () => {
+    debugger;
     console.log("update");
-    const user = {
-        Email: document.getElementById("email").value,
-        Password: document.getElementById("password").value,
-        FirstName: document.getElementById("firstname").value,
-        LastName: document.getElementById("lastname").value,
-    };
     const userfound = JSON.parse(sessionStorage.getItem('user'));
+    const user = {
+        Email: document.getElementById("email").value || userfound.email,
+        Password: document.getElementById("password").value || userfound.password,
+        FirstName: document.getElementById("firstname").value || userfound.firstName,
+        LastName: document.getElementById("lastname").value || userfound.lastName,
+    };
+    debugger;
     const ID = userfound.userId;
     console.log(ID);
     const response = await fetch(`api/users/${ID}`, { // Add a comma here
