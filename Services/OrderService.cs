@@ -24,7 +24,9 @@ namespace Services
             order.OrderDate=DateOnly.FromDateTime(DateTime.Now.Date);
             int sumPay = await sumToPay(order.OrderItems);
             if (sumPay != order.OrderSum)
-                _logger.LogInformation($"sum to pay is not valid. id: {order.UserId}");
+                //_logger.LogInformation($"sum to pay is not valid. id: {order.UserId}");
+                _logger.LogError($"user {order.UserId}  tried perchasing with a difffrent price {order.OrderSum} instead of {sumPay}");
+                _logger.LogInformation($"user {order.UserId}  tried perchasing with a difffrent price {order.OrderSum} instead of {sumPay}");
             order.OrderSum = sumPay;
             //order.OrderSum = order.OrderItems.Count();
             return await _IOrderRepository.addOrder(order);
