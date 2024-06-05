@@ -24,18 +24,32 @@ namespace Repositories
         }
 
         public async Task<User> addUser(User user)
-        { 
-            await _picturesStoreContext.Users.AddAsync(user);
-            await _picturesStoreContext.SaveChangesAsync();
-            return user;           
+        {
+            try
+            {
+                await _picturesStoreContext.Users.AddAsync(user);
+                await _picturesStoreContext.SaveChangesAsync();
+                return user;
+            }
+            catch (Exception err)
+            {
+                return null;
+            }
         }
 
         public async Task<User> updateUser(int id, User userToUpdate)
         {
+            try
+            {
                 userToUpdate.UserId = id;
                 _picturesStoreContext.Update(userToUpdate);
                 await _picturesStoreContext.SaveChangesAsync();
-                return userToUpdate;            
+                return userToUpdate;
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
         }
         public async Task<User> GetUserByEmailAndPassword(User userLogin)
         {

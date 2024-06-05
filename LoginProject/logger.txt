@@ -101,6 +101,7 @@
 2024-06-04 19:29:31.2745 Info Validating config: TargetNames=mylogfile, email, ConfigItems=58, FilePath=M:\web api\web api good\Project\LoginProject\NLog.config
 2024-06-04 19:29:31.2902 Info Configuration initialized.
 2024-06-04 19:29:33.9014 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+<<<<<<< HEAD
 2024-06-04 19:56:55.4415 Info Loading assembly name: NLog.MailKit
 2024-06-04 19:56:55.5298 Info NLog.MailKit, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.0.6704. Product version: 5.2.0+78fee640bcc81f8f578f417ab1504dd9618e7898. GlobalAssemblyCache: False
 2024-06-04 19:56:55.5680 Info Registered target NLog.Targets.FileTarget(Name=mylogfile)
@@ -323,3 +324,5 @@
 2024-06-05 16:13:31.2225 Info Validating config: TargetNames=mylogfile, email, ConfigItems=58, FilePath=M:\web api\web api good\Project\LoginProject\NLog.config
 2024-06-05 16:13:31.2435 Info Configuration initialized.
 2024-06-05 16:13:33.4164 Info NLogRequestPostedBodyMiddleware is not yet initialized, which is required by aspnet-request-posted-body.
+=======
+>>>>>>> parent of 5703996 (add tests for userRepository)
