@@ -14,18 +14,10 @@ namespace Repositories
         }
 
         public async Task<Order> addOrder(Order order)
-        {
-
-            try
-            {
+        {            
                 await _picturesStoreContext.Orders.AddAsync(order);
                 await _picturesStoreContext.SaveChangesAsync();
-                return order;
-            }
-            catch (Exception err)
-            {
-                return null;
-            }
+                return order;  
         }
 
         //public async Task<Order> addOrder(OrderDto orderDto)

@@ -15,6 +15,7 @@ public partial class Order
 
     public int UserId { get; set; }
     
+    
     //public List<int> orderItemId { get; set; } = new List<int>();
 
     public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();

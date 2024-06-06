@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>basket</title>
     <link href="Shop.css" rel="stylesheet" />
-    
+
     <template id="temp-row">
         <tr class="item-row">
             <td class="imageColumn">
@@ -17,6 +17,12 @@
             <td class="descriptionColumn">
                 <div>
                     <h3 class="itemName"></h3>
+               
+                </div>
+            </td>
+            <td class="descriptionColumn">
+                <div>
+
                     <h6>
                         <p class="itemNumber"></p>
                     </h6>
@@ -26,36 +32,26 @@
                 <div>
                     <h3 class="itemName"></h3>
                     <h6>
-                        <p class="itemDescription"></p>>
+                        <p class="itemDescription"></p>
                     </h6>
                 </div>
             </td>
-            <!--<td class="descriptionColumn">
-        <div>
-            <h3 class="itemName"></h3>
-            <h6>
-
-                <a class="viewLink" href="#">לפרטים נוספים</a>
-            </h6>
-        </div>
-    </td>-->
+  
             <td class="totalColumn delete">
                 <div class="expandoHeight" style="height: 99px;">
                     <p class="price"></p>
-                    <button class="removeButton">-</button>
+                </div>
+
+            </td>
+            <td class="totalColumn delete">
+                <div class="expandoHeight" style="height: 99px;">
+                    <button class="decrease">-</button>
                     <button class="addButton">+</button>
+                    <button class="removeProduct">remove item</button>
                 </div>
 
             </td>
-            <td class="availabilityColumn">
-                <div>במלאי</div>
-            </td>
-            <td class="totalColumn delete">
-                <div class="expandoHeight" style="height: 99px;">
-                    <p class="price"></p>
-                    <a href="#" title="לחצו כאן כדי להסיר את פריט זה" class="Hide DeleteButton showText">הסרת פריט</a>
-                </div>
-            </td>
+ 
         </tr>
     </template>
 
@@ -77,17 +73,20 @@
             <table id="items" class="items">
                 <thead>
                     <tr>
-                        <th class="itemsColumn" colspan="2">פריטים</th>
-                        <th>זמינות</th>
+                        <th>פריטים</th>
+
+                        <th>שם המוצר</th>
+                        <th>כמות</th>
+                        <th>תיאור</th>
                         <th class="totalColumn">סכום ההזמנה</th>
-                         <img src="tmp.jpg" alt="" style="width:100%">            
+                        <img src="tmp.jpg" alt="" style="width:100%">
                     </tr>
                 </thead>
                 <tbody></tbody>
             </table>
         </div>
     </div>
-  <!--<button onclick="addOrder()">add order</button>-->
 </body>
 <script src="ShopingBag.js"></script>
 </html>
+
